@@ -5,7 +5,7 @@ export const navigation = [
         element_color: "green-600",
         url: "#",
         active: true,
-        has_icon: false,
+        is_mobile: false,
     },
     {
         id: "1",
@@ -13,7 +13,7 @@ export const navigation = [
         element_color: "blue-600",
         url: "#",
         active: false,
-        has_icon: false,
+        is_mobile: false,
     },
     {
         id: "2",
@@ -21,7 +21,7 @@ export const navigation = [
         element_color: "cyan-500",
         url: "#",
         active: false,
-        has_icon: false,
+        is_mobile: false,
     },
     {
         id: "3",
@@ -29,7 +29,7 @@ export const navigation = [
         element_color: "gray-400",
         url: "#",
         active: false,
-        has_icon: false,
+        is_mobile: false,
     },
     {
         id: "4",
@@ -37,7 +37,7 @@ export const navigation = [
         element_color: "red-800",
         url: "#",
         active: false,
-        has_icon: false,
+        is_mobile: false,
     },
     {
         id: "5",
@@ -45,7 +45,31 @@ export const navigation = [
         element_color: "yellow-400",
         url: "#",
         active: false,
-        has_icon: true,
+        is_mobile: false,
+    },
+    {
+        id: "6",
+        title: "MultiversX",
+        element_color: "cyan-200",
+        url: "#",
+        active: false,
+        is_mobile: true,
+    },
+    {
+        id: "7",
+        title: "QXF9976QXF914A8",
+        element_color: "purple-500",
+        url: "#",
+        active: false,
+        is_mobile: true,
+    },
+    {
+        id: "8",
+        title: "Settings",
+        element_color: "",
+        url: "#",
+        active: false,
+        is_mobile: true,
     },
 ];
 
