@@ -34,7 +34,7 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
     return (
         <>
             <div
-                className={`max-w-sm -translate-x-[120%] transition-all lg:translate-x-0 ${isSidebarShown ? "translate-x-0" : "-translate-x-[120%]"}`}
+                className={`w-full max-w-xs transition-all lg:translate-x-0 2xl:max-w-sm ${isSidebarShown ? "translate-x-0" : "hidden -translate-x-[120%] lg:block"}`}
             >
                 <div className="relative w-full overflow-hidden bg-zinc-900 px-8 py-6">
                     {/* card clip */}
@@ -167,13 +167,13 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
 
             <div className="fixed left-1 top-20 z-20 lg:hidden">
                 <button
-                    className="rounded-r-md bg-gray-800/60 p-2"
+                    className="group rounded-r-md bg-gray-800/60 p-2 transition-colors hover:bg-gray-600/60"
                     onClick={() => setIsSidebarShown((state) => !state)}
                 >
                     {isSidebarShown ? (
-                        <XMarkIcon className="h-5 w-5 text-gray-400" />
+                        <XMarkIcon className="transition-color h-5 w-5 text-gray-400 group-hover:text-white" />
                     ) : (
-                        <Bars2Icon className="h-5 w-5 text-gray-400" />
+                        <Bars2Icon className="transition-color h-5 w-5 text-gray-400 group-hover:text-white" />
                     )}
                 </button>
             </div>

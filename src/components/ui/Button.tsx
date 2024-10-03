@@ -3,7 +3,7 @@ interface ButtonProps {
     children?: React.ReactNode;
     className?: string;
     type?: "button" | "submit";
-    color?: "blue" | "yellow" | "purple";
+    color?: "blue" | "yellow" | "purple" | "white";
 }
 
 export default function Button({
@@ -17,6 +17,7 @@ export default function Button({
         blue: "border-blue-400",
         yellow: "border-yellow-600",
         purple: "border-purple-500",
+        white: "border-white",
     };
 
     const addColor = color ? colors[color] : colors.blue;
