@@ -1,9 +1,18 @@
+// components
+import { Section, Button, Row, Column } from "@/components/ui";
+import { Sidebar } from "@/components/organisms";
+
+// constants
+import { sidebarData } from "@/constants";
+
 export default function Home() {
     return (
         <>
-            <div className="flex min-h-screen items-center justify-center">
-                Hello World
-            </div>
+            <Section id="home">
+                <div className="container relative">
+                    <Sidebar sidebarData={sidebarData} />
+                </div>
+            </Section>
         </>
     );
 }

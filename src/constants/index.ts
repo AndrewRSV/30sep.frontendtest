@@ -73,4 +73,11 @@ export const navigation = [
     },
 ];
 
-export const navigation2 = "";
+export const sidebarData = {
+    net_apy: "23,320",
+    supply_balance: "100,000.0617916",
+    borrow_balance: "240,050.0617916",
+    borrow_limit: "800",
+    borrow_limit_used: "28",
+    htm_booster: "5,050.0617916",
+};

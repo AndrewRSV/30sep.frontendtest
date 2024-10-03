@@ -9,3 +9,7 @@
 body {
     @apply bg-black font-[family-name:var(--font-geist-sans)];
 }
+
+.container {
+    @apply mx-auto max-w-[77.5rem] px-5 xl:max-w-[137.5rem] 2xl:px-10;
+}

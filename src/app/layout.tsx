@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "@/app/globals.css";
 
 // components
-import { Navbar } from "@/components/organisms/navigation";
+import { Navbar } from "@/components/organisms";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -31,8 +31,8 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <div className="overflow-hidden pt-[4.75rem] lg:pt-[5.25rem]">
-                    <div className="fixed -top-40 left-1/2 -translate-x-1/2">
+                <div className="overflow-hidden pt-[4.75rem] lg:pt-[6.25rem]">
+                    <div className="fixed -top-80 left-1/2 z-30 -translate-x-1/2">
                         <div className="h-80 w-80 rounded-full bg-violet-800 blur-[220px]" />
                     </div>
                     <Navbar />

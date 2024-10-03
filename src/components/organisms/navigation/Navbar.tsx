@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="fixed left-0 top-0 z-50 w-full">
+            <div className="fixed left-0 top-0 z-50 w-full bg-black/20 lg:backdrop-blur-sm">
                 <div className="px-5 py-5 2xl:px-10">
                     <div className="relative flex items-center">
                         <div className="absolute inset-x-0 top-0 z-10 hidden lg:block">
@@ -51,7 +51,7 @@ export default function Navbar() {
                         <nav
                             className={`${
                                 openNavigation ? "flex" : "hidden"
-                            } fixed inset-x-0 bottom-0 top-[5rem] bg-black/20 lg:static lg:flex lg:bg-transparent`}
+                            } fixed inset-x-0 bottom-0 top-[4.75rem] bg-black/90 lg:static lg:flex lg:bg-transparent`}
                         >
                             <div className="relative m-auto flex flex-col items-center justify-center lg:flex-row">
                                 {navigation.map((navItem) => {
