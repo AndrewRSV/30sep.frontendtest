@@ -1,7 +1,7 @@
 "use client";
 
 // components
-import { Button, Row, Column } from "@/components/ui";
+import { Row, Column } from "@/components/ui";
 import {
     MainContent1,
     MainContent2,
@@ -22,7 +22,7 @@ export default function MainContent() {
     return (
         <>
             <div className="border-2 border-gray-900/60 text-white">
-                <Row className="divide-x-2 divide-gray-900/60">
+                <Row className="min-h-screen divide-x-2 divide-gray-900/60">
                     <Column
                         className={`w-3/12 transition-all duration-1000 ${!selectedAsset && pageIndex == 1 && "w-6/12"}`}
                     >
