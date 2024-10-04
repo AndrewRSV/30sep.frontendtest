@@ -4,7 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 // components
-import { Button, Row, Column, SidebarDivider } from "@/components/ui";
+import {
+    Button,
+    Row,
+    Column,
+    SidebarDivider,
+    SidebarClip,
+    Label,
+} from "@/components/ui";
 
 // icons
 import { SparklesIcon } from "@heroicons/react/24/solid";
@@ -38,16 +45,7 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
             >
                 <div className="relative w-full overflow-hidden bg-zinc-900 px-8 py-6">
                     {/* card clip */}
-                    <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
-                        <div className="absolute -left-12 -top-16 h-20 w-28 -rotate-45 bg-black"></div>
-
-                        <div className="absolute right-0 top-0 h-9 w-36 bg-black"></div>
-                        <div className="absolute -top-[72px] right-[99px] h-20 w-28 rotate-45 bg-black"></div>
-                        <div className="absolute -right-[57px] -top-[24px] h-20 w-28 rotate-45 bg-black"></div>
-
-                        <div className="absolute bottom-0 left-0 h-1 w-6 bg-purple-500" />
-                        <div className="absolute bottom-0 right-0 h-0.5 w-12 bg-green-900"></div>
-                    </div>
+                    <SidebarClip />
 
                     <div className="absolute right-3 top-0 z-10">
                         <Button>View Analytics</Button>
@@ -64,28 +62,22 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
 
                         <div className="my-3">
                             <div className="py-4">
-                                <h3 className="scale-y-105 text-xs font-medium uppercase text-gray-600">
-                                    Net Apy
-                                </h3>
-                                <h2 className="mt-4 text-lg font-semibold">
+                                <Label>Net Apy</Label>
+                                <h2 className="mt-4 text-base font-semibold 2xl:text-lg">
                                     {sidebarData?.net_apy}%
                                 </h2>
                             </div>
                             <SidebarDivider />
                             <div className="py-4">
-                                <h3 className="scale-y-105 text-xs font-medium uppercase text-gray-600">
-                                    Supply Balance
-                                </h3>
-                                <h2 className="mt-4 text-lg font-semibold">
+                                <Label>Supply Balance</Label>
+                                <h2 className="mt-4 text-base font-semibold 2xl:text-lg">
                                     ${sidebarData?.supply_balance}
                                 </h2>
                             </div>
                             <SidebarDivider />
                             <div className="py-4">
-                                <h3 className="scale-y-105 text-xs font-medium uppercase text-gray-600">
-                                    Borrow Balance
-                                </h3>
-                                <h2 className="mt-4 text-lg font-semibold">
+                                <Label>Borrow Balance</Label>
+                                <h2 className="mt-4 text-base font-semibold 2xl:text-lg">
                                     ${sidebarData?.borrow_balance}
                                 </h2>
                             </div>
@@ -93,12 +85,10 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
                             <div className="py-4">
                                 <Row className="items-center">
                                     <Column className="w-1/2">
-                                        <h3 className="scale-y-105 text-xs font-medium uppercase text-gray-600">
-                                            Borrow Limit
-                                        </h3>
+                                        <Label>Borrow Limit</Label>
                                     </Column>
                                     <Column className="w-1/2">
-                                        <h2 className="w-full text-right text-lg font-semibold">
+                                        <h2 className="w-full text-right text-base font-semibold 2xl:text-lg">
                                             ${sidebarData?.borrow_limit}
                                         </h2>
                                     </Column>
@@ -116,9 +106,7 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
                             <SidebarDivider />
                             <div className="py-4">
                                 <div className="flex w-full items-center justify-between">
-                                    <h3 className="scale-y-105 text-xs font-medium uppercase text-gray-600">
-                                        HTM Booster
-                                    </h3>
+                                    <Label>HTM Booster</Label>
                                     <div className="flex items-center space-x-4">
                                         <Button className="before:bg-zinc-900 after:bg-zinc-900">
                                             +
@@ -128,7 +116,7 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
                                         </Button>
                                     </div>
                                 </div>
-                                <h2 className="mt-4 text-lg font-semibold">
+                                <h2 className="mt-4 text-base font-semibold 2xl:text-lg">
                                     ${sidebarData?.htm_booster}
                                 </h2>
                                 <p className="mt-2 text-xs">

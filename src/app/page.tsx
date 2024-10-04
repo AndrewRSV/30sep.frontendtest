@@ -5,12 +5,15 @@ import { Sidebar, MainContent } from "@/components/organisms";
 // constants
 import { sidebarData } from "@/constants";
 
+// context
+import { MainContextProvider } from "@/context/MainContent";
+
 export default function Home() {
     return (
-        <>
+        <MainContextProvider>
             <Section id="home">
                 <div className="container relative">
-                    <div className="flex w-full lg:space-x-10">
+                    <div className="flex w-full lg:space-x-5">
                         {/* sidebar */}
                         <Sidebar sidebarData={sidebarData} />
 
@@ -21,6 +24,6 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-        </>
+        </MainContextProvider>
     );
 }

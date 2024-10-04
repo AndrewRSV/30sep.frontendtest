@@ -90,6 +90,9 @@ export const assetData = [
         apy: "5.552",
         wallet: "245",
         collateral: "0.00",
+        supply_apy: "3.93140",
+        htm_booster_apy: "3.72",
+        net_apy: "7.652",
     },
     {
         id: 2,
@@ -98,6 +101,9 @@ export const assetData = [
         apy: "2.345",
         wallet: "189",
         collateral: "0.50",
+        supply_apy: "1.230",
+        htm_booster_apy: "1.10",
+        net_apy: "2.430",
     },
     {
         id: 3,
@@ -106,6 +112,9 @@ export const assetData = [
         apy: "4.321",
         wallet: "367",
         collateral: "1.20",
+        supply_apy: "2.561",
+        htm_booster_apy: "1.55",
+        net_apy: "4.111",
     },
     {
         id: 4,
@@ -114,6 +123,9 @@ export const assetData = [
         apy: "6.789",
         wallet: "412",
         collateral: "2.00",
+        supply_apy: "3.100",
+        htm_booster_apy: "2.00",
+        net_apy: "5.100",
     },
     {
         id: 5,
@@ -122,6 +134,9 @@ export const assetData = [
         apy: "7.001",
         wallet: "523",
         collateral: "3.00",
+        supply_apy: "4.000",
+        htm_booster_apy: "3.00",
+        net_apy: "7.000",
     },
     {
         id: 6,
@@ -130,6 +145,9 @@ export const assetData = [
         apy: "5.999",
         wallet: "642",
         collateral: "0.75",
+        supply_apy: "2.990",
+        htm_booster_apy: "2.50",
+        net_apy: "5.490",
     },
     {
         id: 7,
@@ -138,6 +156,9 @@ export const assetData = [
         apy: "3.214",
         wallet: "278",
         collateral: "1.50",
+        supply_apy: "1.800",
+        htm_booster_apy: "1.20",
+        net_apy: "3.000",
     },
     {
         id: 8,
@@ -146,6 +167,9 @@ export const assetData = [
         apy: "4.912",
         wallet: "355",
         collateral: "0.30",
+        supply_apy: "2.400",
+        htm_booster_apy: "1.80",
+        net_apy: "4.200",
     },
     {
         id: 9,
@@ -154,6 +178,9 @@ export const assetData = [
         apy: "2.885",
         wallet: "486",
         collateral: "1.75",
+        supply_apy: "1.500",
+        htm_booster_apy: "1.20",
+        net_apy: "2.700",
     },
     {
         id: 10,
@@ -162,6 +189,9 @@ export const assetData = [
         apy: "5.432",
         wallet: "194",
         collateral: "0.00",
+        supply_apy: "3.100",
+        htm_booster_apy: "2.50",
+        net_apy: "5.600",
     },
     {
         id: 11,
@@ -170,6 +200,9 @@ export const assetData = [
         apy: "4.567",
         wallet: "533",
         collateral: "1.10",
+        supply_apy: "2.500",
+        htm_booster_apy: "2.00",
+        net_apy: "4.500",
     },
     {
         id: 12,
@@ -178,6 +211,9 @@ export const assetData = [
         apy: "6.013",
         wallet: "657",
         collateral: "0.65",
+        supply_apy: "3.200",
+        htm_booster_apy: "2.50",
+        net_apy: "5.700",
     },
     {
         id: 13,
@@ -186,6 +222,9 @@ export const assetData = [
         apy: "8.200",
         wallet: "323",
         collateral: "2.00",
+        supply_apy: "4.200",
+        htm_booster_apy: "3.50",
+        net_apy: "7.700",
     },
     {
         id: 14,
@@ -194,6 +233,9 @@ export const assetData = [
         apy: "3.678",
         wallet: "276",
         collateral: "1.25",
+        supply_apy: "1.800",
+        htm_booster_apy: "1.60",
+        net_apy: "3.400",
     },
     {
         id: 15,
@@ -202,6 +244,9 @@ export const assetData = [
         apy: "7.345",
         wallet: "493",
         collateral: "0.95",
+        supply_apy: "3.800",
+        htm_booster_apy: "3.00",
+        net_apy: "6.800",
     },
     {
         id: 16,
@@ -210,6 +255,9 @@ export const assetData = [
         apy: "6.123",
         wallet: "371",
         collateral: "0.80",
+        supply_apy: "3.500",
+        htm_booster_apy: "2.90",
+        net_apy: "6.400",
     },
     {
         id: 17,
@@ -218,5 +266,8 @@ export const assetData = [
         apy: "5.789",
         wallet: "419",
         collateral: "1.40",
+        supply_apy: "2.900",
+        htm_booster_apy: "2.20",
+        net_apy: "5.100",
     },
 ];
