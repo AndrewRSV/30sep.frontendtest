@@ -11,5 +11,5 @@ body {
 }
 
 .container {
-    @apply mx-auto max-w-[77.5rem] px-5 xl:max-w-[137.5rem] 2xl:px-10;
+    @apply mx-auto max-w-[77.5rem] px-3 md:px-5 xl:max-w-[137.5rem] 2xl:px-10;
 }

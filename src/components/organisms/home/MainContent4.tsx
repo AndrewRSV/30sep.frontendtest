@@ -5,7 +5,15 @@ import { Row, Column, Button, Label } from "@/components/ui";
 import { useMainContentContext } from "@/context/MainContent";
 
 export default function MainContent4() {
-    const { pageIndex, setPageIndex, selectedAsset } = useMainContentContext();
+    const { pageIndex, setPageIndex, setSelectedAsset } =
+        useMainContentContext();
+
+    const handleContent4Click = () => {
+        if (pageIndex < 5) {
+            setPageIndex(1);
+            setSelectedAsset(null);
+        }
+    };
 
     return (
         <>
@@ -29,7 +37,7 @@ export default function MainContent4() {
                         <Column className="my-5 flex w-full justify-end">
                             <div className="flex flex-col items-end">
                                 <Button className="block">Max</Button>
-                                <h4 className="text-sm">
+                                <h4 className="text-right text-sm">
                                     Awaiting for network response{" "}
                                     <span className="inline-block aspect-square h-2 w-2 rounded-full bg-green-600" />
                                 </h4>
@@ -39,20 +47,20 @@ export default function MainContent4() {
                             <Label>Status</Label>
                             <h4 className="text-sm">Sent</h4>
                         </Column>
-                        <Column className="mt-3 w-full">
+                        <Column className="mb-2 mt-3 w-full">
                             <Label>TX Hash</Label>
-                            <div className="flex space-x-4">
-                                <h4 className="text-sm">
-                                    Qxf99760xf9...14a8scl230dx
-                                </h4>
+                            <h4 className="text-sm">
+                                Qxf99760xf9...14a8scl230dx
+                            </h4>
+                        </Column>
+                        <Column className="w-full">
+                            <div className="flex justify-end">
                                 <Button color="yellow">Q</Button>
                             </div>
                         </Column>
 
                         <Column className="mt-10 w-full">
-                            <Button
-                            // onClick={handleContent3Click}
-                            >
+                            <Button onClick={handleContent4Click}>
                                 Complete
                             </Button>
                         </Column>

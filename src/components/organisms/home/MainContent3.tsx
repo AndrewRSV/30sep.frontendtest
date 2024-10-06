@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CountUp from "react-countup";
 
 // components
@@ -20,6 +20,12 @@ export default function MainContent3() {
         }
     };
 
+    useEffect(() => {
+        if (pageIndex == 1) {
+            setStartAnimation(false);
+        }
+    }, [pageIndex]);
+
     return (
         <>
             <div
@@ -36,30 +42,28 @@ export default function MainContent3() {
 
                 {pageIndex >= 3 && (
                     <>
+                        <div className="flex items-end justify-between">
+                            <h2 className="scale-y-105 text-xl font-semibold">
+                                <CountUp
+                                    start={0}
+                                    end={startAnimation ? 0.045571 : 0}
+                                    duration={1.5}
+                                    decimals={6}
+                                />{" "}
+                                <span className="text-[10px] uppercase leading-3 text-gray-600">
+                                    EGLD
+                                </span>
+                            </h2>
+                            <div className="flex justify-end">
+                                <Button
+                                    color="white"
+                                    onClick={() => setStartAnimation(true)}
+                                >
+                                    Max
+                                </Button>
+                            </div>
+                        </div>
                         <Row>
-                            <Column className="w-2/3">
-                                <h2 className="scale-y-105 text-2xl font-semibold">
-                                    <CountUp
-                                        start={0}
-                                        end={startAnimation ? 0.045571 : 0}
-                                        duration={1.5}
-                                        decimals={6}
-                                    />{" "}
-                                    <span className="text-[10px] uppercase leading-3 text-gray-600">
-                                        EGLD
-                                    </span>
-                                </h2>
-                            </Column>
-                            <Column className="w-1/3 self-end">
-                                <div className="flex justify-end">
-                                    <Button
-                                        color="white"
-                                        onClick={() => setStartAnimation(true)}
-                                    >
-                                        Max
-                                    </Button>
-                                </div>
-                            </Column>
                             <Column className="my-4 w-full">
                                 <Label>Estimated Price</Label>
                             </Column>
@@ -68,14 +72,17 @@ export default function MainContent3() {
                                     0.04502 Hegld = $ 1.75
                                 </p>
                             </Column>
-                            <Column className="mt-10 w-full">
-                                <Button
-                                    color="purple"
-                                    onClick={handleContent3Click}
-                                >
-                                    Apply
-                                </Button>
-                            </Column>
+
+                            {startAnimation && (
+                                <Column className="mt-10 w-full">
+                                    <Button
+                                        color="purple"
+                                        onClick={handleContent3Click}
+                                    >
+                                        Apply
+                                    </Button>
+                                </Column>
+                            )}
                         </Row>
                     </>
                 )}

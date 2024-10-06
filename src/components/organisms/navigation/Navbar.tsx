@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="fixed left-0 top-0 z-50 w-full bg-black/20 lg:backdrop-blur-sm">
+            <div className="fixed left-0 top-0 z-50 w-full bg-black/50 lg:bg-black/20 lg:backdrop-blur-sm">
                 <div className="px-5 py-5 2xl:px-10">
                     <div className="relative flex items-center">
                         <div className="absolute inset-x-0 top-0 z-10 hidden lg:block">
@@ -98,7 +98,7 @@ export default function Navbar() {
                                                     className={`h-0.5 ${navItem.active ? "w-[70%]" : "w-[3%]"} ${bgColor}`}
                                                 />
                                             </div>
-                                            <div className="flex items-center py-3 lg:py-6">
+                                            <div className="flex items-center py-5 lg:py-6">
                                                 <div className="mr-3 flex h-4 w-4 items-center justify-center rounded-[40%] border border-gray-700 bg-gray-800 transition-colors group-hover:bg-gray-700">
                                                     <div
                                                         className={`h-2 w-2 rounded-full ${bgColor}`}
@@ -107,7 +107,7 @@ export default function Navbar() {
 
                                                 <a
                                                     href={navItem.url}
-                                                    className="relative block overflow-hidden text-ellipsis whitespace-nowrap text-[10px] font-semibold uppercase leading-3 text-gray-400 transition-colors group-hover:text-white 2xl:text-xs"
+                                                    className="relative block overflow-hidden text-ellipsis whitespace-nowrap text-base font-semibold uppercase leading-3 text-gray-400 transition-colors group-hover:text-white lg:text-[10px] 2xl:text-xs"
                                                 >
                                                     {navItem.title}
                                                 </a>

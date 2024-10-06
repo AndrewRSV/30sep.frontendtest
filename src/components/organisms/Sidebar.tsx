@@ -36,14 +36,10 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ sidebarData }: SidebarProps) {
-    const [isSidebarShown, setIsSidebarShown] = useState(false);
-
     return (
         <>
-            <div
-                className={`w-full max-w-xs transition-all lg:translate-x-0 2xl:max-w-sm ${isSidebarShown ? "translate-x-0" : "hidden -translate-x-[120%] lg:block"}`}
-            >
-                <div className="relative w-full overflow-hidden bg-zinc-900 px-8 py-6">
+            <div className="w-full transition-all lg:!sticky lg:top-28 lg:max-w-xs lg:self-start 2xl:max-w-sm">
+                <div className="relative w-full overflow-hidden bg-zinc-900 px-6 py-6 lg:px-8">
                     {/* card clip */}
                     <SidebarClip />
 
@@ -133,7 +129,7 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
                     </div>
                 </div>
 
-                <div className="relative mt-40">
+                <div className="relative mt-40 hidden lg:block">
                     <Link href="#" className="group cursor-pointer">
                         <div className="flex items-center space-x-6 p-3 text-gray-600 group-hover:text-white">
                             <ArrowUturnUpIcon className="h-5 w-5 rotate-90" />
@@ -151,19 +147,6 @@ export default function Sidebar({ sidebarData }: SidebarProps) {
                         </div>
                     </Link>
                 </div>
-            </div>
-
-            <div className="fixed left-1 top-20 z-20 lg:hidden">
-                <button
-                    className="group rounded-r-md bg-gray-800/60 p-2 transition-colors hover:bg-gray-600/60"
-                    onClick={() => setIsSidebarShown((state) => !state)}
-                >
-                    {isSidebarShown ? (
-                        <XMarkIcon className="transition-color h-5 w-5 text-gray-400 group-hover:text-white" />
-                    ) : (
-                        <Bars2Icon className="transition-color h-5 w-5 text-gray-400 group-hover:text-white" />
-                    )}
-                </button>
             </div>
         </>
     );

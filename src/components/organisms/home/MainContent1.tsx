@@ -68,7 +68,7 @@ export default function MainContent1({ assetData }: MainContent1Props) {
                 {!selectedAsset && (
                     <>
                         <Row className="-mx-2">
-                            <Column className="w-3/12 px-2">
+                            <Column className="w-4/12 px-2 lg:w-3/12">
                                 <ContentTab
                                     label="Supply Markets"
                                     value="supply_market"
@@ -93,11 +93,11 @@ export default function MainContent1({ assetData }: MainContent1Props) {
                                     <ChevronDownIcon className="h-4 w-4 text-yellow-800" />
                                 </div>
                             </Column>
-                            <Column className="w-1/12 px-2" />
+                            <Column className="hidden w-1/12 px-2 lg:block" />
                         </Row>
 
                         <Row className="mb-3 mt-5">
-                            <Column className="w-3/12">
+                            <Column className="w-4/12 lg:w-3/12">
                                 <h3 className="scale-y-110 text-[10px] uppercase leading-3 text-gray-600">
                                     Asset
                                 </h3>
@@ -117,7 +117,7 @@ export default function MainContent1({ assetData }: MainContent1Props) {
                                     Collateral
                                 </h3>
                             </Column>
-                            <Column className="w-1/12"></Column>
+                            <Column className="hidden w-1/12 lg:block"></Column>
                         </Row>
 
                         {assetData.map((assetItem) => {
@@ -130,16 +130,18 @@ export default function MainContent1({ assetData }: MainContent1Props) {
                                     }
                                     key={assetItem.id}
                                 >
-                                    <Row className="group cursor-pointer border-b-2 border-gray-900/60 px-2 py-5 text-sm transition-all duration-300 ease-in-out hover:scale-95 hover:bg-gray-100/10">
-                                        <Column className="w-3/12">
-                                            <div className="flex items-center space-x-2">
-                                                <div className="mr-3 flex h-4 w-4 items-center justify-center rounded-[40%] border border-gray-700 bg-gray-800 transition-colors group-hover:bg-gray-700">
+                                    <Row className="group cursor-pointer border-b-2 border-gray-900/60 py-5 text-sm transition-all duration-300 ease-in-out hover:scale-95 hover:bg-gray-100/10 lg:px-2">
+                                        <Column className="w-4/12 lg:w-3/12">
+                                            <div className="flex items-center space-x-1 lg:space-x-2">
+                                                <div className="mr-3 flex h-4 min-w-4 items-center justify-center rounded-[40%] border border-gray-700 bg-gray-800 transition-colors group-hover:bg-gray-700">
                                                     <div
                                                         className={`h-2 w-2 rounded-full ${randomColor}`}
                                                     />
                                                 </div>
                                                 <div className="flex flex-col 2xl:flex-row 2xl:items-center 2xl:space-x-2">
-                                                    <h2>{assetItem.name} </h2>
+                                                    <h2 className="line-clamp-1 text-ellipsis text-xs lg:text-sm">
+                                                        {assetItem.name}{" "}
+                                                    </h2>
                                                     <span className="inline-block text-[10px] font-medium uppercase leading-3 text-gray-600">
                                                         {assetItem.currency}
                                                     </span>
@@ -147,22 +149,22 @@ export default function MainContent1({ assetData }: MainContent1Props) {
                                             </div>
                                         </Column>
                                         <Column className="w-3/12">
-                                            <p className="text-center">
+                                            <p className="text-center text-xs lg:text-sm">
                                                 {assetItem.apy}%{" "}
-                                                <CurrencyDollarIcon className="ml-1 inline-block h-4 w-4 text-blue-600" />
+                                                <CurrencyDollarIcon className="inline-block h-4 w-4 text-blue-600 lg:ml-1" />
                                             </p>
                                         </Column>
                                         <Column className="w-2/12">
-                                            <p className="text-center">
+                                            <p className="text-center text-xs lg:text-sm">
                                                 {assetItem.wallet}
                                             </p>
                                         </Column>
                                         <Column className="w-3/12">
-                                            <p className="text-center">
+                                            <p className="text-center text-xs lg:text-sm">
                                                 {assetItem.collateral}
                                             </p>
                                         </Column>
-                                        <Column className="mx-auto w-1/12">
+                                        <Column className="mx-auto hidden w-1/12 lg:block">
                                             <Button
                                                 className="px-1.5 opacity-0 group-hover:opacity-100"
                                                 color="white"
@@ -179,6 +181,24 @@ export default function MainContent1({ assetData }: MainContent1Props) {
 
                 {selectedAsset && (
                     <Row className="">
+                        <Column className="w-full">
+                            <div className="relative mb-5 overflow-hidden rounded-xl bg-zinc-900 px-5 py-4">
+                                <Label>Assets for Supply</Label>
+                                <div className="mt-4 flex items-center space-x-2">
+                                    <div className="mr-3 flex h-4 w-4 items-center justify-center rounded-[40%] border border-gray-700 bg-gray-800 transition-colors group-hover:bg-gray-700">
+                                        <div
+                                            className={`h-2 w-2 rounded-full ${getRandomColor()}`}
+                                        />
+                                    </div>
+                                    <div>
+                                        <div>{selectedAsset.name}</div>
+                                        <span className="block text-[10px] font-medium uppercase leading-3 text-gray-600">
+                                            {selectedAsset.currency}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </Column>
                         <Column className="w-1/2">
                             <Label className="py-1">Supply APY</Label>
                         </Column>

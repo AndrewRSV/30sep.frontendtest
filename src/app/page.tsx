@@ -13,7 +13,7 @@ export default function Home() {
         <MainContextProvider>
             <Section id="home">
                 <div className="container relative">
-                    <div className="flex w-full lg:space-x-5">
+                    <div className="flex w-full flex-col space-y-10 lg:flex-row lg:space-x-5 lg:space-y-0">
                         {/* sidebar */}
                         <Sidebar sidebarData={sidebarData} />
 

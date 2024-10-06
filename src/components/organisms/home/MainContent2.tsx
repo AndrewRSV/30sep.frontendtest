@@ -39,35 +39,29 @@ export default function MainContent2() {
 
                 {pageIndex >= 2 && (
                     <>
-                        <Row className="-mx-2 mb-7">
-                            <Column className="w-1/4 px-2">
-                                <ContentTab
-                                    label="Supply"
-                                    value="supply"
-                                    activeTab={activeMarket}
-                                    setActiveTab={setActiveMarket}
-                                />
-                            </Column>
-                            <Column className="w-1/4 px-2">
-                                <ContentTab
-                                    label="Withdraw"
-                                    value="withdraw"
-                                    activeTab={activeMarket}
-                                    setActiveTab={setActiveMarket}
-                                />
-                            </Column>
-                            <Column className="w-1/4 px-2">
-                                <ContentTab
-                                    label="Collateral"
-                                    value="collateral"
-                                    activeTab={activeMarket}
-                                    setActiveTab={setActiveMarket}
-                                />
-                            </Column>
-                        </Row>
+                        <div className="mb-5 flex items-center space-x-3">
+                            <ContentTab
+                                label="Supply"
+                                value="supply"
+                                activeTab={activeMarket}
+                                setActiveTab={setActiveMarket}
+                            />
+                            <ContentTab
+                                label="Withdraw"
+                                value="withdraw"
+                                activeTab={activeMarket}
+                                setActiveTab={setActiveMarket}
+                            />
+                            <ContentTab
+                                label="Collateral"
+                                value="collateral"
+                                activeTab={activeMarket}
+                                setActiveTab={setActiveMarket}
+                            />
+                        </div>
 
                         <Row>
-                            <Column className="w-1/2">
+                            <Column className="w-2/3">
                                 <Label>Supply Rates</Label>
                                 <div className="mt-2 flex items-center">
                                     <div className="mr-3 flex h-4 w-4 items-center justify-center rounded-[40%] border border-gray-700 bg-gray-800 transition-colors group-hover:bg-gray-700">
@@ -78,7 +72,7 @@ export default function MainContent2() {
                                     </h3>
                                 </div>
                             </Column>
-                            <Column className="w-1/2 self-end">
+                            <Column className="w-1/3 self-end">
                                 <h3 className="w-full text-right text-xs leading-3 2xl:text-sm">
                                     {selectedAsset?.supply_apy}%
                                 </h3>
@@ -86,13 +80,13 @@ export default function MainContent2() {
 
                             <Column className="my-4 w-full" />
 
-                            <Column className="w-1/2">
+                            <Column className="w-2/3">
                                 <div className="flex items-center space-x-2">
                                     <CurrencyDollarIcon className="inline-block h-4 w-4 text-blue-600" />
                                     <Label>HTM Booster APY</Label>
                                 </div>
                             </Column>
-                            <Column className="w-1/2">
+                            <Column className="w-1/3">
                                 <h3 className="w-full text-right text-xs leading-3 2xl:text-sm">
                                     {selectedAsset?.htm_booster_apy}%
                                 </h3>
@@ -100,13 +94,13 @@ export default function MainContent2() {
 
                             <Column className="my-1 w-full" />
 
-                            <Column className="w-1/2">
+                            <Column className="w-2/3">
                                 <div className="flex items-center space-x-2">
                                     <CurrencyDollarIcon className="inline-block h-4 w-4 text-blue-600" />
                                     <Label>Net APY</Label>
                                 </div>
                             </Column>
-                            <Column className="w-1/2">
+                            <Column className="w-1/3">
                                 <h3 className="w-full text-right text-xs leading-3 2xl:text-sm">
                                     {selectedAsset?.net_apy}%
                                 </h3>

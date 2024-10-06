@@ -1,7 +1,7 @@
 export default function SidebarClip() {
     return (
         <>
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden">
                 <div className="absolute -left-12 -top-16 h-20 w-28 -rotate-45 bg-black"></div>
 
                 <div className="absolute right-0 top-0 h-9 w-36 bg-black"></div>
